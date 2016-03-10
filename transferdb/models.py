@@ -18,53 +18,11 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class RouteData(BaseModel):
-    depTimeString = models.CharField(max_length=500, blank=True, null=True)
-    maxUpperColumns = models.CharField(max_length=500, blank=True, null=True)
-    fromCity = models.CharField(max_length=100,null=True, blank=True)
-    maxLowerColumns = models.CharField(max_length=500, blank=True, null=True)
-    maxLowerRows = models.CharField(max_length=500, blank=True, null=True)
-    DPInformationList = JSONField(null=True)
-    toCity = models.CharField(max_length=500, blank=True, null=True)
-    maxUpperRows = models.CharField(max_length=500, blank=True, null=True)
-    vehicleType = models.CharField(max_length=500, blank=True, null=True)
-    BPInformationList = JSONField(null=True)
-    travelDate = models.CharField(max_length=500, blank=True, null=True)
-    busType = models.CharField(max_length=500, blank=True, null=True)
-    MPax = models.CharField(max_length=500, blank=True, null=True)
-    serviceName = models.CharField(max_length=500, blank=True, null=True)
-    seatList = JSONField(null=True)
-    toCityId = models.CharField(max_length=500, blank=True, null=True)
-    operatorId = models.CharField(max_length=500, blank=True, null=True)
-    amenities = models.CharField(max_length=500, blank=True, null=True)
-    notes = models.CharField(max_length=500, blank=True, null=True)
-    dateOFJourney = models.CharField(max_length=500, blank=True, null=True)
-    routeId = models.CharField(max_length=500, blank=True, null=True)
-    travels = models.CharField(max_length=500, blank=True, null=True)
-    arrTime = models.CharField(max_length=500, blank=True, null=True)
-    arrTimeString = models.CharField(max_length=500, blank=True, null=True)
-    serviceNumber = models.CharField(max_length=500, blank=True, null=True)
-    aes = models.CharField(max_length=500, blank=True, null=True)
-    mxSPrTxn = models.CharField(max_length=500, blank=True, null=True)
-    depTime = models.CharField(max_length=500, blank=True, null=True)
-    isBPMapLinkShown = models.CharField(max_length=500, blank=True, null=True)
-    fromCityId = models.CharField(max_length=500, blank=True, null=True)
-    param42 = JSONField(null=True)
-
-
-    def __unicode__(self):
-        return unicode(self.user)
-
-
 class TripData(BaseModel):
     status = models.CharField(max_length=500, blank=True, null=True)
     defaultSorting = models.CharField(max_length=500, blank=True, null=True)
     amenitiesData = models.CharField(max_length=500, blank=True, null=True)
     message = models.CharField(max_length=500, blank=True, null=True)
-
-
-    def __unicode__(self):
-        return unicode(self.user)
 
 
 class TripSingleData(BaseModel):
@@ -102,3 +60,37 @@ class TripSingleData(BaseModel):
     Cmpg = JSONField(null=True)
     BsSt = models.CharField(max_length=500, blank=True, null=True)
     ArTm = models.CharField(max_length=500, blank=True, null=True)
+
+
+class RouteData(BaseModel):
+    depTimeString = models.CharField(max_length=500, blank=True, null=True)
+    maxUpperColumns = models.CharField(max_length=500, blank=True, null=True)
+    fromCity = models.CharField(max_length=100,null=True, blank=True)
+    maxLowerColumns = models.CharField(max_length=500, blank=True, null=True)
+    maxLowerRows = models.CharField(max_length=500, blank=True, null=True)
+    DPInformationList = JSONField(null=True)
+    toCity = models.CharField(max_length=500, blank=True, null=True)
+    maxUpperRows = models.CharField(max_length=500, blank=True, null=True)
+    vehicleType = models.CharField(max_length=500, blank=True, null=True)
+    BPInformationList = JSONField(null=True)
+    travelDate = models.CharField(max_length=500, blank=True, null=True)
+    busType = models.CharField(max_length=500, blank=True, null=True)
+    MPax = models.CharField(max_length=500, blank=True, null=True)
+    serviceName = models.CharField(max_length=500, blank=True, null=True)
+    seatList = JSONField(null=True)
+    toCityId = models.CharField(max_length=500, blank=True, null=True)
+    operatorId = models.CharField(max_length=500, blank=True, null=True)
+    amenities = models.CharField(max_length=500, blank=True, null=True)
+    notes = models.CharField(max_length=500, blank=True, null=True)
+    dateOFJourney = models.CharField(max_length=500, blank=True, null=True)
+    routeId = models.CharField(max_length=500, blank=True, null=True)
+    travels = models.CharField(max_length=500, blank=True, null=True)
+    arrTime = models.CharField(max_length=500, blank=True, null=True)
+    arrTimeString = models.CharField(max_length=500, blank=True, null=True)
+    serviceNumber = models.CharField(max_length=500, blank=True, null=True)
+    aes = models.CharField(max_length=500, blank=True, null=True)
+    mxSPrTxn = models.CharField(max_length=500, blank=True, null=True)
+    depTime = models.CharField(max_length=500, blank=True, null=True)
+    isBPMapLinkShown = models.CharField(max_length=500, blank=True, null=True)
+    fromCityId = models.CharField(max_length=500, blank=True, null=True)
+    param42 = JSONField(null=True)

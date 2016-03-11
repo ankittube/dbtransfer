@@ -17,6 +17,12 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
+class City(BaseModel):
+    name = models.CharField(max_length=500, blank=True, null=True)
+    cityid = models.CharField(max_length=500, blank=True, null=True)
+    state = models.CharField(max_length=500, blank=True, null=True)
+    zone = models.CharField(max_length=500, blank=True, null=True)
+
 
 class TripData(BaseModel):
     status = models.CharField(max_length=500, blank=True, null=True)
